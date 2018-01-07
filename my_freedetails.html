@@ -5,11 +5,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <!-- 引入 Bootstrap -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/header.css">
-  <link rel="stylesheet" type="text/css" href="css/footer.css">
-  <link rel="stylesheet" type="text/css" href="css/customer.css">
   <link rel="stylesheet" type="text/css" href="css/css.css">
-  <script src="bootstrap/js/jquery.min.js"></script>
+  
+  <script src="bootstrap/js/jquery3.2.1.min.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -25,68 +24,48 @@
           </div>
         </div>
         <div class="col-md-8 headerRight">
-          <div class="headerline">
-            <div class="loginBox">
-              <ul class="nav loginBox">
-                <li>
-                  <a href="login_login.html" target="_self">登录</a>
-                  <span>|</span>
-                </li>
-                <li>
-                  <a href="login_sign.html" target="_self">注册</a>
-                  <span>|</span>
-                </li>
-                <li>
-                  <a href="#" target="_self">关于我们</a>
-                  <span>|</span>
-                </li>
-                <li>
-                  <a href="laywer_sign.html" target="_self">律师入口</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="headerline">
-            <div class="loginBox">
-              <nav class="navbar-default" role="navigation">
-                <ul class="nav mainNav" >
-                  <li class="active">
-                    <a href="index.html">首页</a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="counseling_free.html" class="dropdown-toggle" data-toggle="dropdown">法律咨询</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a href="counseling_free.html">免费法律咨询</a>
-                      </li>
-                      <li class="divider"></li>
-                      <li>
-                        <a href="counseling.html">电话咨询</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">打官司</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a href="lawsuit.html">找律师打官司</a>
-                      </li>
-                      <li class="divider"></li>
-                      <li>
-                        <a href="selfhelplawsuit.html">自助打官司</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">其他法律业务</a>
-                  </li>
-                  <li class="lastItem">
-                    <a href="#">投诉</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+          <ul class="nav justify-content-end loginBox">
+            <li class="nav-item">
+              <a class="nav-link" href="login_login.html" target="_self">登录</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login_sign.html" target="_self">注册</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_self">关于我们</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="laywer_sign.html" target="_self">律师入口</a>
+            </li>
+          </ul>
+          <ul class="nav justify-content-end mainNav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">首页</a>
+            </li>
+            <li class="dropdown">
+              <a href="counseling_free.html" class="dropdown-toggle nav-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">法律咨询</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="counseling_free.html">免费法律咨询</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="counseling.html">电话咨询</a>
+              </div>
+
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">打官司</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="lawsuit.html">找律师打官司</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="selfhelplawsuit.html">自助打官司</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">其他法律业务</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">投诉</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
