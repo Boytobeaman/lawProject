@@ -120,9 +120,12 @@
           </h4>
           <div class="row">
             <div class="form-group col-md-4 col-sm-12">
-              <select class="form-control">
+              <!-- <select class="form-control">
                 <option value="">选择您的所在地</option>
-              </select>
+              </select> -->
+              <button type="button" class="btn btn-dark btn-law" data-toggle="modal" data-target="#yourLocation">
+                选择您的所在地
+              </button>
             </div>
           </div>
           <h3 class="space10">纠纷是否已由法院判决或裁定？</h3>
@@ -225,7 +228,64 @@
 
     </div>
   </div>
+  <div class="modal fade" id="yourLocation">
+    <div class="modal-dialog">
+      <div class="modal-content">
 
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">选择您的所在地</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="select-city-section">
+            <p class="mb-0">热门城市</p>
+            <div class="hot-cities">
+              <span class="hot-city">北京</span>
+              <span class="hot-city">上海</span>
+              <span class="hot-city">广州</span>
+              <span class="hot-city">深圳</span>
+            </div>
+          </div>
+          <div class="select-city-section">
+            <p class="mb-0">选择城市</p>
+            <div class="select-cities">
+              <span class="select-city">成都</span>
+              <span class="select-city">南京</span>
+              <span class="select-city">天津</span>
+              <span class="select-city">杭州</span>
+              <span class="select-city">苏州</span>
+              <span class="select-city">重庆</span>
+              <span class="select-city">武汉</span>
+              <span class="select-city">郑州</span>
+            </div>
+          </div>
+          <div class="select-city-section">
+            <p class="mb-0">选择省份</p>
+            <div class="select-province">
+              <select>
+                <option value="黑龙江">黑龙江</option>
+                <option value="吉林">吉林</option>
+              </select>
+              <select>
+                <option value="哈尔滨">哈尔滨</option>
+                <option value="齐齐哈尔">齐齐哈尔</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">退出</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">确认</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <footer class="fixed-bottom">
     <ul class="list-group">
       <li>

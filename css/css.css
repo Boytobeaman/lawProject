@@ -1,8 +1,28 @@
+body{
+    background-color: #eee;
+    font-family: 'Helvetica Neue','Helvetica','Arial','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
+}
 .topBar{ position: fixed; z-index: 10;
     background-image: -moz-linear-gradient(left, #333F5F , #9D7961); 
     background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #333F5F ), color-stop(1,#9D7961)); 
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333F5F ', endColorstr='#9D7961', GradientType='0');  
     
+}
+h1 {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+a{
+    color: #721c24;
+}
+.orange{
+    color: #ab1422
+}
+.img-responsive{
+    background: url(../img/mainBg.png) no-repeat fixed center center;
+    background-size: cover;
+    height: 100%;
 }
 
 .loginBox a.nav-link{
@@ -44,30 +64,21 @@
 
 
 
-h1 {
-    font-size: 26px;
-    font-weight: 400;
-}
-body{
-    background-color: #f7f7f7;
-}
+
 .containerWapper{
     /*background-color: #fff;*/
     float: left;
     width: 100%;
     z-index: 1;
-    min-height: 550px;
-    padding: 0 5% 5%;
+    /*min-height: 550px;*/
+    padding: 0 5%;
 }
 .form-control{
     font-size: 16px;
     font-weight: 100;
 }
 
-.mainPart{
-    min-height: 530px;
-    z-index: 1;
-}
+
 .marginTop30{
     margin-top: 50px;
 }
@@ -99,7 +110,9 @@ footer{
 .btnNext button.haveA{
     margin-bottom: 10px;
 }
-
+.select-city-section{
+    margin-bottom: 20px;
+}
 /*---counseling_free_step2----*/
 .step2Step{
     margin: 20px 150px 90px;
@@ -480,7 +493,7 @@ footer.indexFooter{
 ul li{list-style:none;}
 .ft12{font-size:12px}
 
-.img-responsive{background: url(../img/mainBg.png) no-repeat top center; min-height: 500px;}
+
 
 
 /* ------------------------------------------------------------------------------------
@@ -502,12 +515,11 @@ SEARCH       */
     background-color: #CFB87E;
     border-color: #CFB87E; cursor: pointer;border-radius: 5rem;
 }
-.empty{ margin: 14em 0 0; display: block;}
 
 
 /* ------------------------------------------------------------------------------------
 neiyene */   
-.mainPart{min-height: 600px;padding-top: 75px;}
+.mainPart{padding-top: 75px;}
 
 /* -----.mainPart .container{ padding:3em 0;}--*/
 .mainPart .container h1{
@@ -532,7 +544,7 @@ neiyene */
     background: #FFFFFF;
     border: 1px solid #856404;
     box-shadow: 0 1px 3px 0 rgba(191,188,188,0.50);
-    margin:0.2em;
+    margin:0.5em 0;
     padding:0px;
     min-height:auto;
     float: none;
@@ -556,7 +568,10 @@ neiyene */
 
 /*breadcrumb*/
 .breadcrumb{background: none;}
-.breadcrumb li{ font-size: 12px; color: #ccc}
+.breadcrumb li{
+    font-size: 12px; 
+    color: #898f95;
+}
 .breadcrumb li a{color:#856404;background: url(../img/icon_next.png) no-repeat 94% 50%; padding-right: 20px;}
 
 
@@ -582,7 +597,7 @@ h4.gray{font-size: 12px;color: #9B9B9B;}
 
 .writeInfo .row .writeInfoText{ margin:0px 0 2.5em; padding:20px 40px}
 .writeInfoText{ font-size: 14px;color: #9B9B9B}
-.orange{color: #F5A623}
+
 .writeInfoText .orange{margin-bottom: 10px}
 .writeInfoText span{ color: #58627C }
 .writeInfo .row .writeInfoRight{ margin: 0em 0.2em; padding: 0px;position: relative;z-index:5}
@@ -601,13 +616,16 @@ h4.gray{font-size: 12px;color: #9B9B9B;}
 .writeInfoRightTitle li{font-size: 28px;color: #FFFFFF; text-align: center; margin-left: 0px; font-weight:200; padding:30px 0;}
 .phoneIcon{background: url(../img/phone.png) no-repeat; z-index:59999; display:block; height:60px; width:60px; 
     position: absolute; top: 25%;left: 42%;}
-.writeInfoRightItem{padding:2em ;}
+.writeInfoRightItem{padding: 2em 1em;}
 .writeInfoRightItem li{background: url(../img/icon_ok.png) no-repeat center left; padding-left:30px;color:#58627C;margin:0.5em 0 }  
 .sLabel{ padding: 15px 0}
 /* ------------------------------------------------------------------------------------
 lawsuit      */
-.img-lawsuit{background: url(../img/lawsuit.png) no-repeat top center;}
-.lawsuit-content{text-align: center; padding: 5em 0 12em}
+.img-lawsuit{
+    background: url(../img/lawsuit.png) no-repeat fixed center center;
+    background-size: cover;
+}
+.lawsuit-content{text-align: center;}
 .lawsuit-content .heading{font-size: 40px;color: #CFB87E;padding: 1em 0 0.5em;font-weight: 200;}
 .lawsuit-content p{font-size: 30px;color: #FFFFFF;padding: 0em 0 0.5em;font-weight: 200;}
 .lawsuit-content a{color: #fff;
@@ -702,9 +720,28 @@ laywer center          */
 .writeInfo .row .caseBox .gray{ color: #999;}
 .tableBox{}
 
-
-
-
+/*pagination component*/
+.page-link{
+    color: #716160;
+}
+.page-link:focus,
+.page-link:hover {
+    color: #716160;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #ddd;
+}
+/*button component*/
+.btn-law {
+    color: #fff;
+    background-color: #806961;
+    border-color: #806961;
+}
+.btn-law:hover {
+    color: #fff;
+    background-color: #5b5560;
+    border-color: #5b5560;
+}
 
 .form-group .form-control{ border-radius: 4px;background: url(../img/arrow.png) no-repeat right #fff;appearance:none;
   -moz-appearance:none;
@@ -712,5 +749,5 @@ laywer center          */
 
 
 /*footer*/
-footer{background-color: #14152D; text-align: center; color: #7C93AD; font-size: 12px;padding: 2em 0;}
+footer{background-color: #14152D; text-align: center; color: #7C93AD; font-size: 12px;padding: 1em 0;}
 footer .list-group li{ line-height:20px;}
