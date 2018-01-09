@@ -172,12 +172,7 @@ label {
     color: #fff;
     padding:.5rem 3rem;
 }
-.loginWapper{
-    margin-top: 12%;
-}
-.login-BG img{
-    width: 99%;
-}
+
 .signupBox{
     width: 70%;
 }
@@ -506,7 +501,10 @@ SEARCH       */
 .container-fluid{ margin: 6rem 0;}
 .form-inline .form-group{width:500px}
 .form-inline .form-control input.searchBox{width:300px；padding: .5rem 1rem;border:2px solid #CFB87E;}
-.tab-content{max-width: 700px;}
+/*.tab-content{max-width: 700px;}*/
+.bid-header{
+    background-color: #fff;
+}
 .form-control{border-radius: 5rem;}
 .container-fluid .row{margin: 3em 0;}
 
@@ -595,7 +593,7 @@ h4.gray{font-size: 12px;color: #9B9B9B;}
 
 .introcouPhone .form-control,.myCell .form-control{border: 1px solid #CFB87E; color: #CFB87E;box-shadow: 0 1px 3px 0 rgba(191,188,188,0.50); margin: 0.5em 0 0;}
 
-.writeInfo .row .writeInfoText{ margin:0px 0 2.5em; padding:20px 40px}
+.writeInfo .row .writeInfoText{ margin:0px 0 0;padding:20px 40px}
 .writeInfoText{ font-size: 14px;color: #9B9B9B}
 
 .writeInfoText .orange{margin-bottom: 10px}
@@ -637,10 +635,14 @@ lawsuit      */
 /* ------------------------------------------------------------------------------------
 login      */
 .bgBlack{background:rgba(0,0,0,0.50);;position: absolute;z-index:666; width: 100%;height:500%;overflow: hidden;}
-.signupBox{z-index: 5999999;
-    padding: 5px 0 0;
-    margin: 3em 0 0;
-    }
+
+.validate-code{
+    width: calc(100% - 25px)
+}
+#validate-code-refresh{
+    color: #fff;
+    cursor: pointer;
+}
 .signupBox .form-group input{border:none;border-bottom: 1px solid #ccc; border-radius: 0em}
 .signupBox h3{ font-weight: 200; ; color: #CFB87E;}
 .signupTitle{text-align: center;display: block; margin: 0.5em 0 1em;}

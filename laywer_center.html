@@ -5,11 +5,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <!-- 引入 Bootstrap -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/header.css">
-  <link rel="stylesheet" type="text/css" href="css/footer.css">
-  <link rel="stylesheet" type="text/css" href="css/customer.css">
+
   <link rel="stylesheet" type="text/css" href="css/css.css">
-  <script src="bootstrap/js/jquery.min.js"></script>
+  <script src="bootstrap/js/jquery3.2.1.min.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
 
 </head>
@@ -40,6 +39,63 @@
         <h1 class="blue">我的竞标案件</h1>
         <p>正在进行的案件竞标赢积分榜单周期</p>
         <section class="col-md-12 col-sm-12 writeInfo space20">
+          <div class="bid-header row mx-0 mb-3">
+            <div class="col-md-2 text-center d-flex align-items-center justify-content-center">
+              <div>
+                <p>当前已加入竞标</p>
+                <h4>1个</h4>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <ul class="writeInfoText ulCell myCell">
+                <div class="row">
+                  <div class="form-group col-md-3 col-sm-3 sLabelOne">
+                    <label>业务领域:</label>
+                  </div>
+                  <ul class="form-group col-md-9 col-sm-8 sLabelOneUl">
+                    <li>
+                      <label>
+                        <input type="checkbox" checked="checked">房产土地</label>
+                      <label>
+                        <input type="checkbox" checked="">劳动纠纷</label>
+                      <label>
+                        <input type="checkbox" checked="">婚姻家庭</label>
+                    </li>
+
+                    <div class="clearboth"></div>
+                  </ul>
+
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-3 col-sm-3 sLabel">
+                    <label>选择榜单周期：</label>
+                  </div>
+                  <div class="form-group col-md-6 col-sm-6">
+                    <select class="form-control">
+                      <option value="">---全部---</option>
+                      <option value="">第20171104期</option>
+                      <option value="">第20171104期</option>
+                      <option value="">第20171104期</option>
+                      <option value="">第20171104期</option>
+
+                    </select>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <label>
+                    <input type="checkbox" >只看未读的竞标</label>
+                </div>
+            
+
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <div class="col-md-12 col-sm-12 btnNext btnSearch mycasebtnSearch">
+                <button type="button" class="btn btn-primary btn-lg">查询</button>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-md-4 col-sm-4">
               <div class="ulCell laywer_right">
@@ -71,59 +127,9 @@
 
               <div class="tab-pane active" role="tabpanel" id="lineOne">
                 <ul class="writeInfoText ulCell myCell">
-                  <li>
-                    当前已加入竞标
-                    <h4>1个</h4>
-                  </li>
-
+                 
                 </ul>
-                <ul class="writeInfoText ulCell myCell">
-                  <div class="row">
-                    <div class="form-group col-md-3 col-sm-3 sLabelOne">
-                      <label>业务领域:</label>
-                    </div>
-                    <ul class="form-group col-md-9 col-sm-8 sLabelOneUl">
-                      <li>
-                        <label>
-                          <input type="checkbox" checked="checked">房产土地</label>
-                        <label>
-                          <input type="checkbox" checked="">劳动纠纷</label>
-                        <label>
-                          <input type="checkbox" checked="">婚姻家庭</label>
-                      </li>
-
-                      <div class="clearboth"></div>
-                    </ul>
-
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-3 col-sm-3 sLabel">
-                      <label>选择榜单周期：</label>
-                    </div>
-                    <div class="form-group col-md-6 col-sm-6">
-                      <select class="form-control">
-                        <option value="">---全部---</option>
-                        <option value="">第20171104期</option>
-                        <option value="">第20171104期</option>
-                        <option value="">第20171104期</option>
-                        <option value="">第20171104期</option>
-
-                      </select>
-                    </div>
-
-                  </div>
-                  <div class="row">
-                    <label>
-                      <input type="checkbox" >只看未读的竞标</label>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 col-sm-12 btnNext btnSearch mycasebtnSearch">
-                      <button type="button" class="btn btn-primary btn-lg">查询</button>
-                    </div>
-
-                  </div>
-
-                </ul>
+                
                 <ul class="writeInfoText ulCell myCell centerLi">
                   <li class="listTitle"> <b>劳动纠纷</b>
                     <span>案件编号 : 43826</span>
