@@ -6,7 +6,8 @@
   <!-- 引入 Bootstrap -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/css.css">
-  
+  <link href="bootstrap/css/font-awesome.min.css" rel="stylesheet">
+
   <script src="bootstrap/js/jquery3.2.1.min.js"></script>
   <script src="bootstrap/js/popper.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -80,47 +81,66 @@
           </li>
           <li class="active">我的竞标案件</li>
         </ol>
-        <h1 class="blue">我的诉讼案件 (2)</h1>
+        <h1 class="blue">诉讼案件详情</h1>
 
         <section class="col-md-12 col-sm-12 writeInfo space20">
           <div class="row">
             <div class="col-md-10 col-sm-10 mybox">
-              <div class="no-consult">
-                <ul class="writeInfoText ulCell myCell mb-2">
-                  <li class="orange">
-                    暂时没有诉讼案件
-                  </li>
-                </ul>
-              </div>
-              <a href="my_lawsuitlist_detail.html">
-                <ul class="writeInfoText ulCell myCell mb-2">
-                  <li>起诉地点 : 南京</li>
-                  <li>案件类型 : 劳动纠纷</li>
-                  <li class="gray">
-                    <span>案件编号 : 43828</span>
-                    <span>案件提交时间 : 2017.11.06 10:01</span>
-                  </li>
-                </ul>
-              </a>
-              <a href="my_lawsuitlist_detail.html">
-                <ul class="writeInfoText ulCell myCell mb-2">
-                  <li>起诉地点 : 南京</li>
-                  <li>案件类型 : 劳动纠纷</li>
-                  <li class="gray">
-                    <span>案件编号 : 43826</span>
-                    <span>案件提交时间 : 2017.11.06 10:01</span>
-                  </li>
-                </ul>
-              </a>
-              <div class="pagination-wrap">
-                <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-              </div>
+              <ul class="writeInfoText ulCell myCell mb-2">
+                <div class="detail-info">
+                  <ul class="writeInfoText ulCell myCell mb-2">
+                    <li>起诉地点 : 南京</li>
+                    <li>案件类型 : 劳动纠纷</li>
+                  </ul>
+                </div>
+                <div class="layer-feedback">
+                  <div class="title">
+                    律师反馈：
+                  </div>
+                  <ul class="writeInfoText ulCell myCell mb-2">
+                    <div class="row">
+                      <div class="col-sm-2">
+                        <span>律师名</span>
+                        <p><i class="fa fa-user-o" aria-hidden="true"></i></p>
+                      </div>
+                      <div class="col-sm-8">
+                        <li>报价 : 1999</li>
+                        <li>意见 : 意见信息</li>
+                      </div>
+                      <div class="col-sm-2">
+                        <button type="button" class="btn btn-law pull-right">采纳</button>
+                      </div>
+                    </div>
+                  </ul>
+                  <ul class="writeInfoText ulCell myCell mb-2">
+                    <div class="row">
+                      <div class="col-sm-2">
+                        <span>律师名</span>
+                        <p><i class="fa fa-user-o" aria-hidden="true"></i></p>
+                      </div>
+                      <div class="col-sm-8">
+                        <li>报价 : 1999</li>
+                        <li>意见 : 意见信息</li>
+                      </div>
+                      <div class="col-sm-2">
+                        <button type="button" class="btn btn-law pull-right">采纳</button>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
+                <div class="pagination-wrap">
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </div>
+              </ul>
+              
+              
+              
             </div>
 
             <div class="col-md-2 col-sm-2">

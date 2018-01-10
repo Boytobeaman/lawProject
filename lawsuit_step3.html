@@ -80,11 +80,11 @@
       <div class="containerWapper d-flex justify-content-center align-items-center">
         <div class="answer-quiz">
           <div class="quiz-wrap introcouPhone">
-            <div class="quiz">
+            <div class="quiz one">
               <p class="title">
                 请问您本次咨询的主要目的是？
               </p>
-              <ul class="ui-choose" multiple="multiple" id="uc_04">
+              <ul class="ui-choose" id="uc_04">
                 <li class="introcoupCell btnSquare">
                   <a class="step2Line1">纠纷已经发生，想咨询如何解决该纠纷</a>
                 </li>
@@ -93,12 +93,38 @@
                 </li>
               </ul>
             </div>
+            <div class="quiz two" style="display: none">
+              <p class="title">
+                您家人对法院判决或仲裁裁决的态度？
+              </p>
+              <ul class="ui-choose" multiple="multiple" id="uc_05">
+                <li class="introcoupCell btnSquare">
+                  <a class="step2Line1">不满意法院判决或仲裁裁决</a>
+                </li>
+                <li class="introcoupCell btnSquare">
+                  <a class="step2Line1">满意法院判决或仲裁裁决，但对方不满意</a>
+                </li>
+                <li class="introcoupCell btnSquare">
+                  <a class="step2Line1">双方均不满意法院判决或仲裁裁决</a>
+                </li>
+              </ul>
+            </div>
+            <div class="quiz three" style="display: none">
+              <p class="title">
+                您有什么想问的？
+              </p>
+              <textarea class="form-control" rows="4" cols="50"></textarea>
+              <div class="justify-content-end">
+                
+              </div>
+            </div>
           </div>
-          <i class="fa fa-angle-left to-left" aria-hidden="true"></i>
+          <i class="fa fa-angle-left to-left disabled" aria-hidden="true"></i>
           <i class="fa fa-angle-right to-right" aria-hidden="true"></i>
           <div class="button-wrap mt-3">
-            <button type="button" class="btn btn-law">确认后补充</button>
-            <button type="button" class="btn btn-law">暂不能回答</button>
+            <button type="button" class="btn btn-law will-answer">确认后补充</button>
+            <button type="button" class="btn btn-law cannot-answer">暂不能回答</button>
+            <button type="button" class="btn btn-law submit pull-right" style="display: none">立即提交</button>
           </div>
         </div>
       </div>
@@ -116,15 +142,63 @@
     </ul>
   </footer>
 
-  <script>
- $('.ui-choose').ui_choose();   
- var uc_03 = $('#uc_03').data('ui-choose');
-uc_03.click = function(index, item) {
-    console.log('click', index);
-};
-uc_03.change = function(index, item) {
-    console.log('change', index);
-};    
+ <script type="text/javascript">
+   $(document).ready(function(){
+        $('.ui-choose').ui_choose();   
+       //  var uc_03 = $('#uc_03').data('ui-choose');
+       // uc_03.click = function(index, item) {
+       //     console.log('click', index);
+       // };
+       // uc_03.change = function(index, item) {
+       //     console.log('change', index);
+       // };
+     
+       $(".answer-quiz").on("click",".will-answer,.cannot-answer", function () {
+        var showQuiz = $(".quiz-wrap .quiz:visible");
+        toNext();
+       });
+    
+       $(".answer-quiz .to-right").on("click",function () {
+        var showQuiz = $(".quiz-wrap .quiz:visible");
+          if ($(this).hasClass("disabled") || showQuiz.find("li.selected").length == 0) {
+            return
+          }
+         toNext();
+         
+       })
+       function toNext() {
+        var showQuiz = $(".quiz-wrap .quiz:visible");
+         if (showQuiz.next(".quiz").length > 0) {
+          showQuiz.next(".quiz").show();
+          $(".answer-quiz .to-left").removeClass("disabled");
+          showQuiz.hide();
+         }
+         if (showQuiz.next(".quiz").next(".quiz").length == 0) {
+          $(".answer-quiz .to-right").addClass("disabled");
+          $(".answer-quiz .submit").show();
+         }else{
+          $(".answer-quiz .to-right").removeClass("disabled");
+         }
+       }
+       $(".answer-quiz .to-left").on("click",function () {
+        var showQuiz = $(".quiz-wrap .quiz:visible");
+          if ($(this).hasClass("disabled")) {
+            return
+          }
+         if (showQuiz.prev(".quiz").length > 0) {
+          showQuiz.prev(".quiz").show();
+          $(".answer-quiz .submit").hide();
+          $(".answer-quiz .to-right").removeClass("disabled");
+          showQuiz.hide();
+         }
+         
+         if (showQuiz.prev(".quiz").prev(".quiz").length == 0) {
+          $(".answer-quiz .to-left").addClass("disabled");
+         }else{
+          $(".answer-quiz .to-left").removeClass("disabled");
+         }
+       })
+   });
  </script>
 
 </body>

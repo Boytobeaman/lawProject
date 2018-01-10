@@ -5,11 +5,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <!-- 引入 Bootstrap -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/header.css">
-  <link rel="stylesheet" type="text/css" href="css/footer.css">
-  <link rel="stylesheet" type="text/css" href="css/customer.css">
   <link rel="stylesheet" type="text/css" href="css/css.css">
-  <script src="bootstrap/js/jquery.min.js"></script>
+  
+  <script src="bootstrap/js/jquery3.2.1.min.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -228,7 +227,7 @@
               <ul class="lawyer2button">
                 <div class="row">
                   <div class="col-md-12 col-sm-12 btnNext btnSearch caseTwoBtn">
-                    <button type="button" class="btn btn-danger btn-lg" onclick="#'">加入竞标</button>
+                    <button type="button" class="btn btn-law btn-lg" data-target="#joinBidModal" data-toggle="modal">加入竞标</button>
                   </div>
                 </div>
               </ul>
@@ -239,8 +238,39 @@
       </div>
     </div>
   </div>
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="joinBidModal" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
 
-  <footer>
+        <div class="modal-header">
+          <h5 class="modal-title" id="myLargeModalLabel">加入竞标</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+              <div class="form-group">
+                <label for="usr">报价:</label>
+                <input type="text" class="form-control" id="phone">
+              </div>
+              <div class="form-group">
+                <label for="pwd">意见或建议:</label>
+                <textarea class="form-control">
+                  
+                </textarea>
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-law" data-dismiss="modal">保存</button>
+        </div>
+      </div>
+      <!-- /.modal-content --> </div>
+    <!-- /.modal-dialog --> </div>
+
+  <footer class="fixed-bottom">
     <ul class="list-group">
       <li>
         © 2013-2017, shuai.com, Inc. All Rights Reserved. 上海小帅信息科技有限公司 沪ICP备14006851号-2
