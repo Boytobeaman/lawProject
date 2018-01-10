@@ -39,6 +39,7 @@ a{
 .mainNav a{
     color:white;
     font-size: 14px;
+    padding: .5rem .5rem;
 }
 .loginBox a:hover,
 .mainNav a:hover{
@@ -113,6 +114,10 @@ footer{
 .select-city-section{
     margin-bottom: 20px;
 }
+.select-city-section .title{
+    color: #856404;
+    padding-left: 5px;
+}
 /*---counseling_free_step2----*/
 .step2Step{
     margin: 20px 150px 90px;
@@ -151,7 +156,7 @@ label {
     background: none;
 }
 .btnNext a.seeMore{
-    margin: 0 auto 100px;
+    margin: 0 auto 10px;
 }
 
 
@@ -513,8 +518,27 @@ SEARCH       */
     background-color: #CFB87E;
     border-color: #CFB87E; cursor: pointer;border-radius: 5rem;
 }
-
-
+.answer-quiz{
+    min-width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px 100px;
+    margin-top: 20px;
+    position: relative;
+}
+.answer-quiz .fa{
+    position: absolute;
+    font-size: 80px;
+    cursor: pointer;
+    color: #806961;
+    top: 60;
+}
+.answer-quiz .fa.to-left{
+    left: 5px;
+}
+.answer-quiz .fa.to-right{
+    right: 5px;
+}
 /* ------------------------------------------------------------------------------------
 neiyene */   
 .mainPart{padding-top: 75px;}
@@ -601,12 +625,12 @@ h4.gray{font-size: 12px;color: #9B9B9B;}
 .writeInfo .row .writeInfoRight{ margin: 0em 0.2em; padding: 0px;position: relative;z-index:5}
 .exp{padding:30px 0px;border-bottom: 1px solid #EDEDED;}
 .exp li{ display: block;}
-.exp .fl{ width: 15%;border: 1px solid #6EA6E8;border-radius: 18px; text-align: center;font-size: 14px;
-    color: #6EA6E8; padding: 5px 10px}
+.exp .fl{ width: 15%;border: 1px solid #806961;border-radius: 18px; text-align: center;font-size: 14px;
+    color: #806961; padding: 5px 10px}
 .exp .fr{width: 80%}
 .writeInfoText .clr-blue{cursor: help; color: #689CE5}
 .expLast{border-bottom: none;}
-.ulCell .form-control{border-radius:0em; border:none;}
+
 .submit_counter{text-align: right;border-top: 1px solid #EDEDED; color: #ccc; padding: 10px 0}
 .submit_counter span{color: #689CE5;font-size: 12px;}
 .btnNext a{margin-left: 20px;font-size: 12px}
@@ -745,10 +769,23 @@ laywer center          */
     border-color: #5b5560;
 }
 
-.form-group .form-control{ border-radius: 4px;background: url(../img/arrow.png) no-repeat right #fff;appearance:none;
-  -moz-appearance:none;
-  -webkit-appearance:none;}
+/*modal component*/
+.modal-title {
+    font-size: 1.1rem;
+}
 
+/*input component*/
+.form-group .form-control{
+    border-radius: 4px;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+.form-control:focus {
+  border-color: #806961;
+  box-shadow: none;
+  /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);*/
+}
 
 /*footer*/
 footer{background-color: #14152D; text-align: center; color: #7C93AD; font-size: 12px;padding: 1em 0;}
