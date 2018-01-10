@@ -109,9 +109,9 @@
               <li class="gray">2017.11.06 10:57</li>
               <div class="row mybox">
                 <div class="col-md-12 btnSearch solutionTwoBtn">
-                  <button type="button" class="btn btn-dark btn-lg">追问</button>
+                  <button type="button" class="btn btn-law btn-lg" data-target="#zuiwenModal" data-toggle="modal">追问</button>
                   &nbsp;&nbsp;
-                  <button type="button" class="btn btn-danger btn-lg">解决纠纷</button>
+                  <button type="button" class="btn btn-law btn-lg" data-target="#solveConflict" data-toggle="modal">解决纠纷</button>
                 </div>
               </div>
             </ul>
@@ -137,7 +137,56 @@
     </div>
   </div>
 </div>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" id="zuiwenModal" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
 
+      <div class="modal-header">
+        <h5 class="modal-title">追问</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+              <label for="usr"></label>
+              <textarea class="form-control"></textarea>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-law" data-dismiss="modal">保存</button>
+      </div>
+    </div>
+    <!-- /.modal-content --> </div>
+  <!-- /.modal-dialog --> </div>
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" id="solveConflict" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">解决纠纷</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+              <div class="form-group">
+                <label for="usr"></label>
+                <textarea class="form-control"></textarea>
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-law" data-dismiss="modal">保存</button>
+        </div>
+      </div>
+      <!-- /.modal-content --> </div>
+    <!-- /.modal-dialog --> </div>
 <footer>
   <ul class="list-group">
     <li>

@@ -251,7 +251,9 @@ footer.indexFooter{
     font-size: 14px;
     padding: 0 30px;
 }
-
+.searchBox .homepage-search{
+    border-radius: 50px;
+}
 
 /*---lawsuit----*/
 .lawsuit-content h3.heading{
@@ -521,13 +523,21 @@ SEARCH       */
     border-color: #CFB87E; cursor: pointer;border-radius: 5rem;
 }
 .answer-quiz{
-    min-width: 500px;
+    min-width: 650px;
+    height: 400px;
     background-color: #fff;
     border-radius: 5px;
     padding: 20px 100px;
     margin-top: 50px;
     position: relative;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.card{
+    margin-bottom: 10px;
+}
+.quiz-wrap .quiz ul{
+    height: 245px;
+    overflow-y: auto;
 }
 .answer-quiz .fa{
     position: absolute;
@@ -721,6 +731,9 @@ my          */
 .introcouPhone .mycenterCell li a{color: #58627C}
 .introcouPhone .mycenterCell li a:hover,.mybox a:hover{ text-decoration: none}
 .mybox a:hover{background-color: #689CE5}
+.mybox .card a:hover {
+    background-color: #fff;
+}
 .mybox a .writeInfoText{color: #58627C}
 .writeInfo .row .writeInfoText .gray{ color: #ccc; padding-top: 20px}
 .writeInfo .row .writeInfoText .gray span{ padding-right: 20px}

@@ -138,9 +138,12 @@
           </h4>
           <div class="row">
             <div class="form-group col-md-4 col-sm-12">
-              <select class="form-control">
+              <!-- <select class="form-control">
                 <option value="">选择您的所在地</option>
-              </select>
+              </select> -->
+              <button type="button" class="btn btn-dark btn-law" data-toggle="modal" data-target="#yourLocation">
+                选择您的所在地
+              </button>
             </div>
           </div>
           <h3 class="space10">纠纷是否已由法院判决或裁定？</h3>
@@ -212,6 +215,59 @@
 
       </div>
 
+    </div>
+  </div>
+  <div class="modal fade" id="yourLocation">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">选择您的所在地</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="select-city-section">
+            <p class="mb-0 title">选择省份</p>
+            <div class="select-provinces">
+              <ul class="ui-choose">
+                <li class="select-province">北京</li>
+                <li class="select-province">天津</li>
+                <li class="select-province">河北</li>
+                <li class="select-province">山西</li>
+                <li class="select-province">内蒙古</li>
+                <li class="select-province">辽宁</li>
+                <li class="select-province">吉林</li>
+                <li class="select-province">黑龙江</li>
+              </ul>
+            </div>
+          </div>
+          <div class="select-city-section">
+            <p class="mb-0 title">选择城市</p>
+            <div class="select-cities">
+              <ul class="ui-choose">
+                <li class="select-city">长春市</li>
+                <li class="select-city">吉林市</li>
+                <li class="select-city">四平市</li>
+                <li class="select-city">辽源市</li>
+                <li class="select-city">通化市</li>
+                <li class="select-city">白山市</li>
+                <li class="select-city">白城市</li>
+                <li class="select-city">松原市</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-dismiss="modal">退出</button>
+          <button type="button" class="btn btn-law" data-dismiss="modal">确认</button>
+        </div>
+
+      </div>
     </div>
   </div>
 

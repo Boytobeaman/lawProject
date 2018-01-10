@@ -155,6 +155,7 @@
      
        $(".answer-quiz").on("click",".will-answer,.cannot-answer", function () {
         var showQuiz = $(".quiz-wrap .quiz:visible");
+        showQuiz.find("li").removeClass("selected");
         toNext();
        });
     
