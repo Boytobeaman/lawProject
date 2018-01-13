@@ -16,7 +16,7 @@
   <div class="skin-blu skin-admin">
     <header class="admin-header fixed-top d-flex align-items-center">
         <!-- Logo -->
-        <a href="#" class="logo mr-auto">
+        <a href="admin.html" class="logo mr-auto">
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>管理后台</b></span>
         </a>
@@ -41,23 +41,23 @@
       <section class="sidebar" style="height: auto;">
         <ul class="sidebar-menu tree" data-widget="tree">
           <li class="treeview">
-            <a href="admin.html">
-             <span>获取所有纷争信息</span>
+            <a href="admin-viewCaseInfo.html">
+             <span>纷争信息</span>
             </a>
           </li>
           <li class="treeview active">
             <a href="admin-getLevelOneData.html">
-              <span>获取一级案件类型</span>
+              <span>一级类型</span>
             </a>
           </li>
           <li class="treeview">
             <a href="admin-createCaseParent.html">
-              <span>创建案件类型</span>
+              <span>创建一级类型</span>
             </a>
           </li>
           <li>
             <a href="admin-createCaseSub.html">
-              <span>创建案件子类型</span>
+              <span>创建二级类型</span>
             </a>
           </li>
          
@@ -83,35 +83,11 @@
                     <tr>
                       <th scope="row">1000002</th>
                       <td>借贷纠纷、投资理财</td>
-                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/admin/falltypus/getLevelTwoData/1000002">查看</a><a role="button" href="" class="deleteFalltypusLink btn btn-outline-dark btn-sm" id="">删除</a></td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="admin-getLevelTwoData.html">查看</a><a role="button" href="" class="deleteFalltypusLink btn btn-outline-dark btn-sm" id="">删除</a></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
-            <div class="alert alert-primary">这下面是点击查看后的结果</div>
-            <div class="row mx-0">
-              <div class="table-wrap w-100 scroll-y scroll-y-400">
-                <table class="table table-sm table-bordered">
-                  <thead class="thead-light">
-                    <tr>
-                      <th scope="col">案件编号</th>
-                      <th scope="col">案件描述</th>
-                      <th scope="col">操作</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">82049543</th>
-                      <td>借贷纠纷、投资理财</td>
-                      <td><a role="button" href="" class="deleteFalltypusLink btn btn-outline-dark btn-sm" id="">删除</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="text-center w-100 mb-0">
-                <a role="button" class="btn btn-outline-dark" href="javascript:history.back(-1)">返回</a>
-              </p>
             </div>
           </div>
           
