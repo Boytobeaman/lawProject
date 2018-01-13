@@ -5,120 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/AdminLTE.min.css"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="css/_all-skins.min.css"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="css/css.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/admin.css">
+  
 
   <script src="bootstrap/js/jquery3.2.1.min.js"></script>
   <script src="bootstrap/js/popper.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
-<style type="text/css">
-  body{
-      background-color: #eee;
-      font-family: 'Helvetica Neue','Helvetica','Arial','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
-  }
-  ul li {
-    list-style: none;
-  }
-  a:hover, a:active, a:focus {
-      outline: none;
-      text-decoration: none;
-      color: #72afd2;
-  }
-  .sidebar-menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-  }
 
-  .admin-header {
-    height: 50px;
-    position: relative;
-    max-height: 100px;
-    z-index: 1030;
-    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #333F5F ), color-stop(1,#9D7961));
-    padding: 0 15px;
-  }
-  .admin-header a.nav-link {
-      color: white;
-      font-size: 12px;
-      border-right: 1px solid #ac8873;
-      margin: 5px 0;
-      padding-top: 0;
-      padding-bottom: 0;
-  }
-  .admin-header a{
-    color: #fff;
-  }
-  .admin-header a:hover{
-    text-decoration: none;
-    color: #CFB87E;
-  }
-  .admin-header .logo{
-    width: 215px;
-    height: 50px;
-    line-height: 50px;
-    border-right: 1px solid #6e7379;
-    
-  }
-  .skin-admin .main-sidebar{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 230px;
-      padding-top: 50px;
-      background-color: #222d32;
-      min-height: 100%;
-  }
-  .skin-admin .sidebar a {
-    color: #b8c7ce;
-  }
-  .skin-admin .sidebar-menu>li:hover>a,
-  .skin-admin .sidebar-menu>li.active>a {
-      color: #fff;
-      background: #1e282c;
-  }
-  .skin-admin .sidebar-menu>li.active>a {
-      border-left-color: #3c8dbc;
-  }
-  .skin-admin .sidebar-menu>li>a {
-      border-left: 3px solid transparent;
-  }
-  .sidebar-menu>li>a {
-      padding: 12px 5px 12px 15px;
-      display: block;
-  }
-  .content-wrapper {
-      min-height: 100%;
-      background-color: #ecf0f5;
-      z-index: 800;
-      margin-left: 230px;
-  }
-  .box {
-      position: relative;
-      border-radius: 3px;
-      background: #ffffff;
-      border-top: 3px solid #d2d6de;
-      margin-bottom: 20px;
-      width: 100%;
-      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-  }
-  .box.box-primary {
-      border-top-color: #826a61;
-  }
-  footer {
-    margin-left: 230px;
-    background-color: #14152D;
-    text-align: center;
-    color: #7C93AD;
-    font-size: 12px;
-    padding: 1em 0;
-  }
-  footer .list-group li {
-      line-height: 20px;
-  }
-</style>
 <body>
   <div class="skin-blu skin-admin">
     <header class="admin-header fixed-top d-flex align-items-center">
@@ -147,23 +41,23 @@
     <aside class="main-sidebar" style="">
       <section class="sidebar" style="height: auto;">
         <ul class="sidebar-menu tree" data-widget="tree">
-          <li class="treeview">
-            <a href="#">
+          <li class="treeview active">
+            <a href="admin.html">
              <span>获取所有纷争信息</span>
             </a>
           </li>
           <li class="treeview">
-            <a href="#">
+            <a href="admin-getLevelOneData.html">
               <span>获取一级案件类型</span>
             </a>
           </li>
-          <li class="treeview active">
-            <a href="#">
+          <li class="treeview">
+            <a href="admin-createCaseParent.html">
               <span>创建案件类型</span>
             </a>
           </li>
           <li>
-            <a href="pages/widgets.html">
+            <a href="#">
               <span>创建案件子类型</span>
             </a>
           </li>
@@ -173,9 +67,272 @@
       <!-- /.sidebar -->
     </aside>
     <div class="content-wrapper" style="padding-top: 5%">
-      <div class="menu-content" style="overflow-y: auto;max-height: 900px;max-width: 800px;margin: 0 auto;">
-        <div class="box box-primary" style="min-height: 300px;">
-          
+      <div class="menu-content" style="overflow-y: auto;max-width: 860px;margin: 0 auto;">
+        <div class="box box-primary p-3" style="min-height: 300px;">
+          <div class="all-case-info" style="">
+            <div class="row mx-0">
+              <div class="col-md-8">
+                <form>
+                  <div class="form-group row">
+                    <label for="caseType" class="pl-0 col-sm-4 col-form-label">所属案件类型：</label>
+                    <div class="col-sm-8">
+                      <select class="form-control" onchange="retrieveQuestions(this)">
+                        <option value="-1">选择从属案件类型</option>
+                        <option id="1000002" value="1000002">借贷纠纷、投资理财</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-4 pr-0">
+                <a role="button" class="btn btn-law float-right" href="/disputeInfo/createDisputeInfo">新建</a>
+              </div>
+            </div>
+            <div class="row mx-0">
+              <div class="table-wrap w-100 scroll-y scroll-y-400">
+                <table class="table table-sm table-bordered">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">问题编号</th>
+                      <th scope="col">问题描述</th>
+                      <th scope="col">是否根问题</th>
+                      <th scope="col">类型</th>
+                      <th scope="col">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">13438844</th>
+                      <td>犯罪嫌疑人涉嫌罪名是什么？（填写）</td>
+                      <td>否</td>
+                      <td>用户输入</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">14436099</th>
+                      <td>如果您是受害人，你的要求是什么？（以下可并列多选）</td>
+                      <td>否</td>
+                      <td>多选题</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">13438844</th>
+                      <td>犯罪嫌疑人涉嫌罪名是什么？（填写）</td>
+                      <td>否</td>
+                      <td>用户输入</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">14436099</th>
+                      <td>如果您是受害人，你的要求是什么？（以下可并列多选）</td>
+                      <td>否</td>
+                      <td>多选题</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">13438844</th>
+                      <td>犯罪嫌疑人涉嫌罪名是什么？（填写）</td>
+                      <td>否</td>
+                      <td>用户输入</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">14436099</th>
+                      <td>如果您是受害人，你的要求是什么？（以下可并列多选）</td>
+                      <td>否</td>
+                      <td>多选题</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">13438844</th>
+                      <td>犯罪嫌疑人涉嫌罪名是什么？（填写）</td>
+                      <td>否</td>
+                      <td>用户输入</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">14436099</th>
+                      <td>如果您是受害人，你的要求是什么？（以下可并列多选）</td>
+                      <td>否</td>
+                      <td>多选题</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">13438844</th>
+                      <td>犯罪嫌疑人涉嫌罪名是什么？（填写）</td>
+                      <td>否</td>
+                      <td>用户输入</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">14436099</th>
+                      <td>如果您是受害人，你的要求是什么？（以下可并列多选）</td>
+                      <td>否</td>
+                      <td>多选题</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">13438844</th>
+                      <td>犯罪嫌疑人涉嫌罪名是什么？（填写）</td>
+                      <td>否</td>
+                      <td>用户输入</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">14436099</th>
+                      <td>如果您是受害人，你的要求是什么？（以下可并列多选）</td>
+                      <td>否</td>
+                      <td>多选题</td>
+                      <td><a role="button" class="btn btn-law btn-sm mr-1" href="/disputeInfo/viewDisputeInfo/13438844">查看</a><a role="button" href="" class="deleteQuestionLink btn btn-outline-dark btn-sm" id="13438844">删除</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-primary">这下面是点击查看后的结果</div>
+          <div class="all-case-info-detail">
+            <div class="small-wrap">
+              <h4 class="text-center">详细信息</h4>
+              <form>
+                <div class="form-group row">
+                  <label for="" class="col-sm-3 col-form-label">问题编号</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" readonly id="currentQuestion" value="17329492">
+                  </div>
+                </div>
+                <div class="form-group row">
+                   <label for="" class="col-sm-3 col-form-label">问题描述</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="currentQuestionDesc" value="请输入其他纠纷的事情经过">
+                  </div>
+                </div>
+                <div class="form-group row">
+                   <label for="" class="col-sm-3 col-form-label">是否是根问题</label>
+                  <div class="col-sm-9 pt-1">
+                    <label class="radio-inline">
+                      <input type="radio" checked="checked" type="radio" name="isRootQuestionRadios" value="Y" disabled>是
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="isRootQuestionRadios" value="N" disabled>否
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group row">
+                   <label for="" class="col-sm-3 col-form-label">问题类型</label>
+                  <div class="col-sm-9 pt-1">
+                    <label class="radio-inline">
+                      <input type="radio" checked="checked" type="radio" name="questionTypeRadios" value="0" disabled>单选
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTypeRadios" value="1" disabled>多选
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTypeRadios" value="2" disabled>文本输入
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group row">
+                   <label for="" class="col-sm-3 col-form-label">所属案件类型</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" disabled="disabled" id="selectFalltypus">
+                      <option value="-1">选择从属案件类型</option>
+                      <option id="1000002" value="1000002">借贷纠纷、投资理财</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                   <label for="" class="col-sm-3 col-form-label">操作</label>
+                  <div class="col-sm-9">
+                    <button class="btn btn-law" type="button" id="unbindQFMapping">解绑</button>
+                    <button class="btn btn-law" type="button" id="editQuestionInfo">编辑</button>
+                    <button class="btn btn-law" type="button" style="display: none" id="saveEditQuestionInfo">保存</button>
+                    <button class="btn btn-outline-dark" type="button" style="display: none" id="cancelEditQuestionInfo">取消</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="mt-5 table-wrap w-100 scroll-y scroll-y-400">
+              <table class="table table-sm table-bordered">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">问题编号</th>
+                    <th scope="col">问题描述</th>
+                    <th scope="col">匹配下级问题</th>
+                    <th scope="col" style="min-width: 200px">操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input class="form-control" disabled="disabled" type="text" id="18277866_currentAnswer" value="18277866">
+                    </td>
+                    <td>
+                      <input class="form-control" disabled="disabled" type="text" id="18277866_currentAnswerDesc" value="否">
+                    </td>
+                    <td>
+                      <select class="form-control" disabled="disabled" id="18277866_selectParent">
+                        <option value="-1">选择下级问题</option>
+                        <option id="13438844" value="13438844">犯罪嫌疑人涉嫌罪名是什么？（填写）</option>
+                      </select>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-law btn-sm btn-sm unbindQAMapping" id="18277866_currentUnbind">解绑</button>
+                      <button type="button" class="btn btn-law btn-sm editAnswerInfo" id="18277866_editAnswerInfoBtn">编辑</button>
+                      <button type="button" class="btn btn btn-outline-dark btn-sm deleteAnswerInfo" id="18277866_deleteAnswerInfoBtn">删除</button>
+                      <button type="button" style="display: none" class="btn btn-law btn-sm saveEditAnswerInfoBtn" id="18277866_saveEditAnswerInfoBtn">保存</button>
+                      <button type="button" style="display: none" class="btn btn-law btn-sm cancelEditAnswerInfo" id="18277866_cancelEditAnswerInfoBtn">取消</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="form-control" disabled="disabled" type="text" id="18277866_currentAnswer" value="18277866">
+                    </td>
+                    <td>
+                      <input class="form-control" disabled="disabled" type="text" id="18277866_currentAnswerDesc" value="否">
+                    </td>
+                    <td>
+                      <select class="form-control" disabled="disabled" id="18277866_selectParent">
+                        <option value="-1">选择下级问题</option>
+                        <option id="13438844" value="13438844">犯罪嫌疑人涉嫌罪名是什么？（填写）</option>
+                      </select>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-law btn-sm btn-sm unbindQAMapping" id="18277866_currentUnbind">解绑</button>
+                      <button type="button" class="btn btn-law btn-sm editAnswerInfo" id="18277866_editAnswerInfoBtn">编辑</button>
+                      <button type="button" class="btn btn btn-outline-dark btn-sm deleteAnswerInfo" id="18277866_deleteAnswerInfoBtn">删除</button>
+                      <button type="button" style="display: none" class="btn btn-law btn-sm saveEditAnswerInfoBtn" id="18277866_saveEditAnswerInfoBtn">保存</button>
+                      <button type="button" style="display: none" class="btn btn-law btn-sm cancelEditAnswerInfo" id="18277866_cancelEditAnswerInfoBtn">取消</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="form-control" disabled="disabled" type="text" id="18277866_currentAnswer" value="18277866">
+                    </td>
+                    <td>
+                      <input class="form-control" disabled="disabled" type="text" id="18277866_currentAnswerDesc" value="否">
+                    </td>
+                    <td>
+                      <select class="form-control" disabled="disabled" id="18277866_selectParent">
+                        <option value="-1">选择下级问题</option>
+                        <option id="13438844" value="13438844">犯罪嫌疑人涉嫌罪名是什么？（填写）</option>
+                      </select>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-law btn-sm btn-sm unbindQAMapping" id="18277866_currentUnbind">解绑</button>
+                      <button type="button" class="btn btn-law btn-sm editAnswerInfo" id="18277866_editAnswerInfoBtn">编辑</button>
+                      <button type="button" class="btn btn btn-outline-dark btn-sm deleteAnswerInfo" id="18277866_deleteAnswerInfoBtn">删除</button>
+                      <button type="button" style="display: none" class="btn btn-law btn-sm saveEditAnswerInfoBtn" id="18277866_saveEditAnswerInfoBtn">保存</button>
+                      <button type="button" style="display: none" class="btn btn-law btn-sm cancelEditAnswerInfo" id="18277866_cancelEditAnswerInfoBtn">取消</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="text-center mb-0">
+                <button type="button" class="btn btn-law" onclick="history.go(-1)">返回</button>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
