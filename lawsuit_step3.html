@@ -110,20 +110,22 @@
               </ul>
             </div>
             <div class="quiz three" style="display: none">
+              <div class="form-group">
+                  <label for="endTime">截止日期:</label>
+                  <input type="date" class="form-control" id="endTime">
+              </div>
               <p class="title">
                 您有什么想问的？
               </p>
               <textarea class="form-control" rows="4" cols="50"></textarea>
-              <div class="justify-content-end">
-                
-              </div>
             </div>
           </div>
-          <i class="fa fa-angle-left to-left disabled" aria-hidden="true"></i>
-          <i class="fa fa-angle-right to-right" aria-hidden="true"></i>
           <div class="button-wrap mt-3">
             <button type="button" class="btn btn-law will-answer">确认后补充</button>
             <button type="button" class="btn btn-law cannot-answer">暂不能回答</button>
+            
+            <button type="button" class="btn btn-law float-right next-one">下一题</button>
+            <button type="button" class="btn float-right mr-1 btn-outline-dark">重置</button>
             <button type="button" class="btn btn-law submit pull-right" style="display: none">立即提交</button>
           </div>
         </div>
@@ -153,7 +155,7 @@
        //     console.log('change', index);
        // };
      
-       $(".answer-quiz").on("click",".will-answer,.cannot-answer", function () {
+       $(".answer-quiz").on("click",".will-answer,.cannot-answer,.next-one", function () {
         var showQuiz = $(".quiz-wrap .quiz:visible");
         showQuiz.find("li").removeClass("selected");
         toNext();

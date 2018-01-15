@@ -206,3 +206,98 @@ list
 
 button
  -->
+
+
+ lawsuit_step3.html
+
+ delete pre()next()
+ add button(下一题和重置)
+
+
+ 最后一题加（label截止日期/日历）
+
+
+ /laywer_center.html
+ 去掉左上角
+ 把数量加在导航后面（5）
+
+ 业务领域: 加滚动条， 15个的效果
+
+
+ laywer_center_mycase.html
+ 加nav
+
+ 免费法律咨询
+ 电话咨询
+
+ 布局和 /laywer_center.html一样
+
+ 案件编号：select
+
+
+
+ navbar 顶部空间小了
+
+
+ 一级类型 顶部加一级案件类型
+ 二级类型 顶部加二级案件类型
+
+
+ 加404页面（link to homepage）
+
+ 加500 页面
+
+
+<!-- places of changes begin -->
+
+ lawsuit_step3.html
+ 删除
+ <i class="fa fa-angle-left to-left disabled" aria-hidden="true"></i>
+ <i class="fa fa-angle-right to-right" aria-hidden="true"></i>
+ 127 add
+<button type="button" class="btn btn-law float-right next-one">下一题</button>
+<button type="button" class="btn float-right mr-1 btn-outline-dark">重置</button>
+ 113 add
+ <div class="form-group">
+     <label for="endTime">截止日期:</label>
+     <input type="date" class="form-control" id="endTime">
+ </div>
+
+css.css
+
+28 modify
+.loginBox a.nav-link{
+	margin: 10px 0 5px;
+}
+
+50 modify
+.mainNav li{
+    margin: 10px 5px 0;
+}
+53 add 
+.headerRight .mainNav li{
+    margin: 5px 0;
+}
+525 modify
+.answer-quiz{
+    padding: 20px 30px;
+}
+
+598 add
+.answer-quiz .introcouPhone .btnSquare a{
+    font-size: 16px;
+    padding: 0 10px;
+ }
+
+
+
+ admin-getLevelOneData.html
+
+ 73 add
+ <h5>一级案件类型</h5>
+
+
+ admin-getLevelTwoData.html
+
+ 73 add
+ <h5>二级案件类型</h5>

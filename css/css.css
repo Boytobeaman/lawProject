@@ -29,7 +29,7 @@ a{
     color:white;
     font-size: 12px;
     border-right: 1px solid #ac8873;
-    margin: 5px 0;
+    margin: 10px 0 5px;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -48,9 +48,14 @@ a{
 }
 
 .mainNav li{
-    margin: 5px 5px 0;
+    margin: 10px 5px 0;
 }
-
+.headerRight .mainNav li{
+    margin: 5px 0;
+}
+.page-404-error{
+    color: #665b60;
+}
 .dropdown-menu .dropdown-item {
     color: #856404;
 }
@@ -62,7 +67,12 @@ a{
 
 .mapId{background: url(../img/map.png) no-repeat; color: #fff; font-size: 12px; padding-left: 18px;margin-top: 20px;}
 
-
+.scroll-y{
+  overflow-y: auto
+}
+.scroll-y-80{
+  max-height: 80px;
+}
 
 
 
@@ -527,7 +537,7 @@ SEARCH       */
     height: 400px;
     background-color: #fff;
     border-radius: 5px;
-    padding: 20px 100px;
+    padding: 20px 30px;
     margin-top: 50px;
     position: relative;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -594,6 +604,10 @@ neiyene */
     display: block;
     font-size: 20px;
     color: #856404; 
+}
+.answer-quiz .introcouPhone .btnSquare a{
+    font-size: 16px;
+    padding: 0 10px;
 }
 .login-sign-jump{
     /*padding-top: 15px;

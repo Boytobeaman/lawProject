@@ -5,11 +5,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <!-- 引入 Bootstrap -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/header.css">
-  <link rel="stylesheet" type="text/css" href="css/footer.css">
-  <link rel="stylesheet" type="text/css" href="css/customer.css">
+
   <link rel="stylesheet" type="text/css" href="css/css.css">
-  <script src="bootstrap/js/jquery.min.js"></script>
+  <script src="bootstrap/js/jquery3.2.1.min.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -19,7 +18,8 @@
 
       <div class="row">
         <div class="col-md-3">
-          <img src="img/logo.png"></div>
+          <img src="img/logo.png">
+        </div>
         <nav class="col-md-9 navbar-default" role="navigation">
           <ul class="nav justify-content-end mainNav">
             <li class="nav-item">
@@ -40,26 +40,41 @@
       <div class="containerWapper">
         <h1 class="blue">咨询池</h1>
         <p class="orange">这里呈现的是您的法律意见已通过评审、但客户尚未委托的案件。</p>
-        <section class="col-md-12 col-sm-12 writeInfo space20">
+        <section class="col-md-12 col-sm-12 writeInfo space20 px-0">
           <div class="row">
-            <div class="col-md-12 col-sm-12 mybox">
+            <div class="col-md-4 col-sm-12">
+              <div class="ulCell laywer_right">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#lineOne" role="tab" data-toggle="tab">免费法律咨询 <span>(</span><span class="value">4</span><span>)</span></a>
+                  </li>
+                  <li role="presentation" class="">
+                    <a href="#lineTwo" role="tab" data-toggle="tab">电话咨询</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-12 mybox">
               <ul class="writeInfoText ulCell myCell">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="row">
-                      <div class="col-md-2 col-sm-3 sLabel mycaseLabel">
+                      <div class="col-md-3 col-sm-3 sLabel mycaseLabel">
                         <label>案件编号：</label>
                       </div>
-                      <div class="col-md-10 col-sm-10">
-                        <input type="text" class="form-control" placeholder="输入案件编号"></div>
+                      <div class="col-md-9 col-sm-9">
+                        <select class="form-control">
+                          <option value="">输入案件编号</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="row">
-                      <div class="form-group col-md-2 col-sm-2 sLabel mycaseLabel">
+                      <div class="form-group col-md-3 col-sm-3 sLabel mycaseLabel">
                         <label>最近：</label>
                       </div>
-                      <div class="form-group col-md-7 col-sm-7">
+                      <div class="form-group col-md-5 col-sm-5">
                         <select class="form-control">
                           <option value="">1</option>
                           <option value="">2</option>
@@ -68,7 +83,7 @@
 
                         </select>
                       </div>
-                      <div class="form-group col-md-3 col-sm-3 sLabel">
+                      <div class="form-group col-md-4 col-sm-4 sLabel">
                         <label>月有最新反馈</label>
                       </div>
                     </div>
