@@ -778,9 +778,6 @@ footer .list-group li{ line-height:20px;}
         margin: 0;
         padding: 0;
     }
-    .mybox .btnSearch button{
-        margin: 0 27px;
-    }
     footer .list-group{
         padding: 0 30px;
     }
@@ -815,14 +812,15 @@ footer .list-group li{ line-height:20px;}
         margin-left: 0!important;
         margin-right: 0!important;
     }
-    .containerWapper p{
-        color: #fff;
-    }
     .answer-quiz {
         min-width: inherit;
     }
     .img-lawywerSign .lawsuit-content a {
         margin: 10px 0px;
+    }
+    .headerRight{
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
