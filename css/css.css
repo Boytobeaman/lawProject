@@ -194,7 +194,7 @@ iframe .impowerBox .title {
     width: 180px;
 }
 .complete-info-wrap{
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 15px;
 }
@@ -205,13 +205,15 @@ iframe .impowerBox .title {
 }
 .complete-info-wrap .step{
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 .step-title{
     display: inline-block;
     position: absolute;
     top: -15px;
+    left: 10px;
     background-color: #eee;
-    padding: 5px;
+    padding: 5px 15px;
 }
 .login-header{
     display: block;
@@ -899,9 +901,26 @@ footer .list-group li{ line-height:20px;}
         padding: 20px 15px;
     }
 }
-
+.alert-warning.info {
+    color: #f60;
+    font-size: 14px;
+    padding-left: 50px;
+    position: relative;
+    background: #fdf3c6;
+    border: 0;
+    margin-bottom: 0;
+}
+.alert-warning.info .icon-msg {
+    position: absolute;
+    left: 18px;
+    top: 17px;
+}
+.alert-warning.info p{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
 .steps.laywer-info{
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -956,6 +975,9 @@ footer .list-group li{ line-height:20px;}
 }
 .cm-step ul.cm-step-list li.current:after {
     background: #806960;
+}
+.cm-step ul.cm-step-list li.current.first-list:before {
+    border-radius: 10px;
 }
 .cm-step ul.cm-step-list li.complete:before {
     background: #806960;
