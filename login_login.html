@@ -11,7 +11,21 @@
   <script src="bootstrap/js/jquery3.2.1.min.js"></script>
   <script src="bootstrap/js/popper.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
- 
+  <script src="/js/wxLogin.js"></script>
+  <!-- <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script> -->
+  <script type="text/javascript">
+    $(function(){
+      var obj = new WxLogin({
+        id:"wx_login_container", 
+        appid: "wxd99431bbff8305a0", 
+        scope: "snsapi_login", 
+        redirect_uri: encodeURIComponent('http://www.pinzhi365.com/qqLogin/weixin'),
+        state: "3d6be0a4035d839573b04816624a415e",
+        style: "black",
+        href: "/css/wechat.css"
+    });
+    })
+  </script>
 </head>
 <body class="loginBGWhite">
 
@@ -77,24 +91,25 @@
 
     <div class="container">
       <div class="row loginWapper d-flex align-items-center" style="height: 100%">
-        <div class="col-md-5 hidden-sm-down">
+        <div class="col-md-6 hidden-sm-down">
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4 offset-sm-1">
           <div class="row signupBox">
             <div class="col-sm-12 signupTitle">
               <h3>用户登录</h3>
             </div>
-            <div class="col-sm-6">
-              <div class="login-box-wechat">
+            <div class="col-sm-5 pl-0">
+              <div class="login-box-wechat" >
                   <div class="login-box-section-title">方式一：微信快速注册</div>
-                  <div class="login-box-wechat-img mt-3 mb-2"><span id="registerQrCodeImg">
-                              <img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?Ticket=gQG88TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyeTIxQzQ2b0Q5dVUxTUVmZU5xMVIAAgQogqZaAwQAjScA" width="140" height="140"></span>
+                  <div id="wx_login_container">
+                    
                   </div>
-                  <div class="login-box-wechat-note">扫描二维码 &gt; 关注公众号 &gt; 注册成功</div>
+                  
+                  
               </div>
               <div class="d-block d-sm-none mb-3"></div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-7">
               <div class=" loginInput" >
                 
                 <div class="login-box-section-title mb-1">方式二：手机号注册</div>
